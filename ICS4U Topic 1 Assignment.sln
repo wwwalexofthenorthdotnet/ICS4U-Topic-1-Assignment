@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36301.6 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICS4U Topic 1 Assignment", "ICS4U Topic 1 Assignment\ICS4U Topic 1 Assignment.csproj", "{21757BAF-455C-4F47-B884-93A21503234E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{21757BAF-455C-4F47-B884-93A21503234E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21757BAF-455C-4F47-B884-93A21503234E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21757BAF-455C-4F47-B884-93A21503234E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21757BAF-455C-4F47-B884-93A21503234E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9AF82823-7B55-4EBA-93E8-8675A2ABF5EC}
+	EndGlobalSection
+EndGlobal
