@@ -13,6 +13,22 @@
 
 #---------------------------------- Content ---------------------------------#
 
+#begin fonts/trajan.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/processorParam:Version=3.8.5.1
+/build:fonts/trajan.spritefont
+
+#begin fonts/TrajanPro-Regular.ttf
+/importer:FontImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/processorParam:Version=3.8.5.1
+/build:fonts/TrajanPro-Regular.ttf
+
 #begin images/backgroundHollowKnight.png
 /importer:TextureImporter
 /processor:TextureProcessor

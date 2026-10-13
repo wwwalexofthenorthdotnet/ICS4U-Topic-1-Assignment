@@ -23,6 +23,8 @@ namespace ICS4U_Topic_1_Assignment
 
         Random generator;
 
+        SpriteFont trajan;
+
 
         public Game1()
         {
@@ -45,11 +47,12 @@ namespace ICS4U_Topic_1_Assignment
 
             knightRect = new Rectangle(generator.Next(1000, 1250), 450, 167, 275);
             shadeRect = new Rectangle(knightRect.X - 350, 500, 259, 208);
-            aspidRect = new Rectangle(825, 250, 107, 137);
+            aspidRect = new Rectangle(generator.Next(825, 1100), 250, 107, 137);
 
-            aspidProjectileRect_1 = new Rectangle(1000, 300, 68, 69);
-            aspidProjectileRect_2 = new Rectangle(975, 400, 68, 69);
-            aspidProjectileRect_3 = new Rectangle(900, 450, 68, 69);
+            aspidProjectileRect_1 = new Rectangle(aspidRect.X + 175, 300, 68, 69);
+            aspidProjectileRect_2 = new Rectangle(aspidRect.X + 150, 400, 68, 69);
+            aspidProjectileRect_3 = new Rectangle(aspidRect.X + 75, 450, 68, 69);
+
 
             base.Initialize();
         }
@@ -59,6 +62,8 @@ namespace ICS4U_Topic_1_Assignment
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
+
+            trajan = Content.Load<SpriteFont>("fonts/trajan");
 
             background = Content.Load<Texture2D>("images/backgroundHollowKnight");
 
@@ -91,13 +96,15 @@ namespace ICS4U_Topic_1_Assignment
 
             _spriteBatch.Draw(background, window, Color.White);
 
+            _spriteBatch.DrawString(trajan, "Hollow Knight", new Vector2(450, 50), Color.White);
+
             _spriteBatch.Draw(theKnight, knightRect, Color.White);
             _spriteBatch.Draw(shade, shadeRect, null,  Color.White * 0.75f, 0f, Vector2.Zero, SpriteEffects.FlipHorizontally, 1f);
             _spriteBatch.Draw(aspid, aspidRect, null,  Color.White, 0f, new Vector2(aspidRect.Width / 2, aspidRect.Height / 2), SpriteEffects.FlipHorizontally, 1f);
 
-            _spriteBatch.Draw(aspidProjectile, aspidProjectileRect_1, null, Color.White, 1.8f, new Vector2(aspidProjectileRect_1.Width / 2, aspidProjectileRect_1.Height / 2), SpriteEffects.FlipHorizontally, 1f);
-            _spriteBatch.Draw(aspidProjectile, aspidProjectileRect_2, null, Color.White, 2f, new Vector2(aspidProjectileRect_2.Width / 2, aspidProjectileRect_2.Height / 2), SpriteEffects.FlipHorizontally, 1f);
-            _spriteBatch.Draw(aspidProjectile, aspidProjectileRect_3, null, Color.White, 2.5f, new Vector2(aspidProjectileRect_3.Width / 2, aspidProjectileRect_3.Height / 2), SpriteEffects.FlipHorizontally, 1f);
+            _spriteBatch.Draw(aspidProjectile, aspidProjectileRect_1, null, Color.White, 1.8f, new Vector2(aspidProjectileRect_1.Width / 2, aspidProjectileRect_1.Height / 2), SpriteEffects.None, 1f);
+            _spriteBatch.Draw(aspidProjectile, aspidProjectileRect_2, null, Color.White, 2f, new Vector2(aspidProjectileRect_2.Width / 2, aspidProjectileRect_2.Height / 2), SpriteEffects.None, 1f);
+            _spriteBatch.Draw(aspidProjectile, aspidProjectileRect_3, null, Color.White, 2.5f, new Vector2(aspidProjectileRect_3.Width / 2, aspidProjectileRect_3.Height / 2), SpriteEffects.None, 1f);
 
 
 
